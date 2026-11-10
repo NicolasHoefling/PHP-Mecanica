@@ -1,0 +1,412 @@
+:root {
+    color-scheme: light;
+    --fundo: #f4f6f8;
+    --tinta: #172b3a;
+    --muted: #526571;
+    --linha: #dce4e7;
+    --ouro: #ffd000;
+    --borda: #ffd900;
+    --branco: #fff;
+    font-family: system-ui, sans-serif
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--tinta);
+    line-height: 1.55
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem max(5%, calc((100% - 1080px) / 2));
+    background: #172b3a;
+    color: white;
+}
+
+.identidade {
+    font-weight: 700;
+}
+
+.nome-etapa {
+    color: #ccdbdf;
+    font-size: .9rem;
+}
+
+a {
+    color: inherit
+}
+
+[hidden] {
+    display: none !important
+}
+
+:focus-visible {
+    outline: 3px solid var(--tinta);
+    outline-offset: 3px
+}
+
+.topo {
+    background: var(--tinta);
+    color: white
+}
+
+.topo-miolo {
+    max-width: 1080px;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    text-decoration: none;
+    font-size: 1.1rem
+}
+
+.marca span {
+    display: grid;
+    place-items: center;
+    width: 2.05rem;
+    height: 2.05rem;
+    border-radius: .45rem;
+    background: var(--ouro);
+    color: var(--tinta);
+    font-weight: 800
+}
+
+.topo p {
+    margin: 0;
+    color: #ccdbdf;
+    font-size: .85rem
+}
+
+.topo p span {
+    margin: 0 .3rem;
+    color: var(--ouro)
+}
+
+.layout {
+    max-width: 1080px;
+    margin: auto;
+    padding: 2.5rem 1.5rem
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-bottom: 1rem
+}
+
+.menu a {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    text-decoration: none;
+    border-radius: .6rem;
+    padding: .58rem .85rem;
+    font-size: .9rem
+}
+
+.menu a:hover {
+    background: #fff7d6
+}
+
+.menu a[aria-current=page] {
+    background: var(--ouro);
+    border-color: var(--ouro);
+    color: var(--tinta)
+}
+
+.sobrelinha {
+    letter-spacing: .11em;
+    font-size: .72rem;
+    font-weight: 800;
+    margin: .1rem 0 .4rem;
+    color: var(--tinta)
+}
+
+.sobrelinha span {
+    color: var(--muted);
+    margin: 0 .2rem
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3.45rem);
+    letter-spacing: -.045em;
+    line-height: 1.08;
+    margin: 0 0 .75rem
+}
+
+.descricao {
+    color: var(--muted);
+    max-width: 68ch;
+    margin: .25rem 0 1.35rem
+}
+
+.paineis {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 1rem
+}
+
+.cartao {
+    min-width: 0;
+    padding: clamp(1rem, 2.5vw, 2rem)
+}
+
+.resultado {
+    border-left: 1px solid var(--linha)
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin: 0 0 1rem
+}
+
+h3 {
+    font-size: .95rem;
+    margin: 1.3rem 0 .4rem
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .8rem .65rem
+}
+
+.campo {
+    min-width: 0
+}
+
+.amplo {
+    grid-column: 1/-1
+}
+
+label {
+    font-size: .86rem;
+    font-weight: 650;
+    display: block;
+    margin: 0 0 .3rem
+}
+
+label small {
+    color: var(--muted);
+    font-size: .7rem;
+    font-weight: 500
+}
+
+.numero {
+    position: relative;
+    display: flex;
+    align-items: center
+}
+
+.numero span {
+    position: absolute;
+    right: .55rem;
+    font-size: .76rem;
+    color: var(--muted);
+    pointer-events: none
+}
+
+.numero:has(span) input {
+    padding-right: 3.2rem
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #aebdb9;
+    border-radius: .45rem;
+    background: #fff;
+    color: var(--tinta);
+    padding: .63rem .58rem;
+    font: inherit;
+    font-size: .92rem
+}
+
+textarea {
+    resize: vertical
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .7rem 1rem;
+    margin-top: 1.15rem
+}
+
+.acoes a {
+    font-size: .82rem;
+    color: var(--muted)
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    border: 0;
+    border-radius: .5rem;
+    padding: .65rem .95rem;
+    background: var(--ouro);
+    color: var(--tinta);
+    font: inherit;
+    font-weight: 750;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.botao:hover {
+    background: #edc100
+}
+
+.nota,
+.erro {
+    margin: .85rem 0 0;
+    font-size: .83rem;
+    color: var(--muted)
+}
+
+.erro {
+    color: #982b24;
+    border-left: 3px solid #b43b33;
+    padding: .4rem .55rem;
+    background: #fff2f0
+}
+
+figure {
+    margin: 0 0 1rem;
+    background: var(--fundo);
+    border-radius: .55rem;
+    padding: .55rem
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 180px
+}
+
+svg text {
+    fill: var(--tinta);
+    font-size: 14px;
+    font-weight: 700
+}
+
+.bloco {
+    fill: var(--ouro)
+}
+
+figcaption {
+    font-size: .75rem;
+    text-align: center;
+    color: var(--muted)
+}
+
+.medidas {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .55rem
+}
+
+.medidas div {
+    border-bottom: 1px solid var(--linha);
+    padding: .55rem;
+    overflow-wrap: anywhere
+}
+
+.medidas div:first-child {
+    grid-column: 1/-1;
+    background: #fff7d6;
+    border-radius: .5rem;
+    border-bottom-color: var(--borda)
+}
+
+dt {
+    font-size: .76rem;
+    color: var(--muted)
+}
+
+dd {
+    margin: 0;
+    font-size: 1.12rem;
+    font-weight: 750;
+    font-variant-numeric: tabular-nums
+}
+
+.medidas div:first-child dd {
+    font-size: 1.62rem
+}
+
+dd span {
+    font-size: .75em;
+    font-weight: 600
+}
+
+ol {
+    padding-left: 1.25rem;
+    margin: .45rem 0 0;
+    color: var(--muted);
+    font-size: .87rem
+}
+
+li+li {
+    margin-top: .55rem
+}
+
+@media(max-width:680px) {
+    .paineis {
+        grid-template-columns: minmax(0, 1fr)
+    }
+
+    .resultado {
+        border-left: 0;
+        border-top: 1px solid var(--linha)
+    }
+
+    .layout {
+        padding-top: 1.5rem
+    }
+
+    .menu {
+        gap: .4rem
+    }
+
+    .menu a {
+        font-size: .8rem
+    }
+
+    .topo-miolo {
+        align-items: flex-start
+    }
+
+    .topo p {
+        text-align: right;
+        font-size: .73rem
+    }
+}
+
+@media(max-width:380px) {
+    .campos {
+        grid-template-columns: minmax(0, 1fr)
+    }
+}

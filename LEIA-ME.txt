@@ -1,0 +1,27 @@
+TEMA II - FORCA, TRABALHO E ENERGIA MECANICA
+Aluno: Nicolas Hoefling de C
+Disciplina: Tecnicas de Programacao
+
+1. Extraia o ZIP inteiro.
+2. Abra a pasta extraida e clique duas vezes em INICIAR.bat.
+3. Mantenha a janela do iniciador aberta durante o uso. Para encerrar
+   o servidor, pressione Ctrl+C ou feche a janela.
+
+O navegador abre automaticamente. Se precisar abrir manualmente, use o
+endereco exibido pelo iniciador. A porta inicial e 8021, independente
+da calculadora de Eletrodinamica da Parte 1.
+
+O ZIP inclui PHP para Windows 10/11 x64. Nao exige instalar PHP ou XAMPP.
+Se o Windows informar falta de VCRUNTIME140.dll, o instalador oficial
+do Visual C++ Redistributable x64 esta em:
+https://aka.ms/vs/17/release/vc_redist.x64.exe
+
+O README.md explica o codigo, os testes e as hipoteses do modelo.
+O enunciado em PDF esta em docs.
+Para rodar os testes no pacote, use:
+runtime\php\php.exe -n tests\validar-calculos.php
+
+This product includes PHP software, freely available from
+http://www.php.net/software/
+Licencas originais em runtime/php/license.txt e
+runtime/php/readme-redist-bins.txt.
